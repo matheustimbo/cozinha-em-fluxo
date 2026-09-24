@@ -9248,7 +9248,7 @@ b5=a6.a
 b6=a6.b
 s=b6.a
 r=b6.b
-b1.l(0,b5,A.aa(["x",s,"y",r,"w",b6.c-s,"h",b6.d-r],b4,b3))}A.any(A.aa(["build","20260923-210439-7b1c970","screen","game","level",c3,"best",b8,"ticks",d1,"playing",c7,"speed",d0,"frame",a9,"view",f,"ui",b0,"buttons",b1],b4,i))},
+b1.l(0,b5,A.aa(["x",s,"y",r,"w",b6.c-s,"h",b6.d-r],b4,b3))}A.any(A.aa(["build","20260923-211524-7b1c970","screen","game","level",c3,"best",b8,"ticks",d1,"playing",c7,"speed",d0,"frame",a9,"view",f,"ui",b0,"buttons",b1],b4,i))},
 ayU(a){var s,r,q,p
 A:{if(a instanceof A.ci){s=A.aa(["kind","belt","exit",a.a.b],t.N,t.K)
 break A}if(a instanceof A.dh){s=A.aa(["kind","bridge","exit",a.a.b],t.N,t.K)
@@ -9263,7 +9263,7 @@ p=q.a
 o=q.b
 n=o.a
 m=o.b
-k.l(0,p,A.aa(["x",n,"y",m,"w",o.c-n,"h",o.d-m],l,r))}A.any(A.aa(["build","20260923-210439-7b1c970","screen","picker","kitchens",b,"buttons",k],l,t.X))},
+k.l(0,p,A.aa(["x",n,"y",m,"w",o.c-n,"h",o.d-m],l,r))}A.any(A.aa(["build","20260923-211524-7b1c970","screen","picker","kitchens",b,"buttons",k],l,t.X))},
 adt:function adt(){},
 anI(a,b){var s,r,q=b.d
 if(q==null)return B.j1
