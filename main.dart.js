@@ -9325,7 +9325,7 @@ b7=a7.a
 b8=a7.b
 s=b8.a
 r=b8.b
-b2.l(0,b7,A.a6(["x",s,"y",r,"w",b8.c-s,"h",b8.d-r],b6,b5))}A.aok(A.a6(["build","20260924-023053-479dcea","screen","game","level",c7,"best",c0,"ticks",d5,"playing",d1,"speed",d4,"frame",b1,"view",f,"ui",b3,"buttons",b2],b6,i))},
+b2.l(0,b7,A.a6(["x",s,"y",r,"w",b8.c-s,"h",b8.d-r],b6,b5))}A.aok(A.a6(["build","20260924-024427-fe04562","screen","game","level",c7,"best",c0,"ticks",d5,"playing",d1,"speed",d4,"frame",b1,"view",f,"ui",b3,"buttons",b2],b6,i))},
 azI(a){var s,r,q,p
 A:{if(a instanceof A.c6){s=A.a6(["kind","belt","exit",a.a.b],t.N,t.K)
 break A}if(a instanceof A.cW){s=A.a6(["kind","bridge","exit",a.a.b],t.N,t.K)
@@ -9340,7 +9340,7 @@ p=q.a
 o=q.b
 n=o.a
 m=o.b
-k.l(0,p,A.a6(["x",n,"y",m,"w",o.c-n,"h",o.d-m],l,r))}A.aok(A.a6(["build","20260924-023053-479dcea","screen","picker","kitchens",b,"buttons",k],l,t.X))},
+k.l(0,p,A.a6(["x",n,"y",m,"w",o.c-n,"h",o.d-m],l,r))}A.aok(A.a6(["build","20260924-024427-fe04562","screen","picker","kitchens",b,"buttons",k],l,t.X))},
 ae9:function ae9(){},
 aea:function aea(){},
 aAH(a){var s,r,q,p=a.dy,o=A.a_(p).h("at<1>"),n=A.kq(new A.at(p,new A.adq(),o))
@@ -40869,7 +40869,7 @@ a0=new A.a7(o+a.c,p+a.d)
 m=a3.i(0,a0)
 if(m!=null&&(m.gi0()&B.f.cg(1,B.a_[(a.a+2)%4].a))>>>0!==0||a1.gI7().i(0,a0)===B.a_[(a.a+2)%4]||i===a)A.rL(a5,c,a)}}},
 a3T(a){var s,r,q,p,o,n,m,l,k
-for(s=this.d,s=[new A.S(s.d,B.ab),new A.S(s.e,B.m1)],r=this.f,q=this.c,p=t.AO,o=0;o<2;++o){n=s[o]
+for(s=this.d,s=[new A.S(s.d,B.ab),new A.S(s.e,B.m1)],r=this.r,q=this.c,p=t.AO,o=0;o<2;++o){n=s[o]
 m=n.b
 for(n=J.b6(n.a);n.p();){l=n.gB()
 k=A.c([],p)
