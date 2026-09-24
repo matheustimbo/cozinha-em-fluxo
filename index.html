@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <base href="/cozinha-em-fluxo/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Cozinha em fluxo">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <title>Cozinha em fluxo</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; background: #efe7d9; overscroll-behavior: none; touch-action: none; }
+    #loading-screen {
+      align-items: center;
+      background: #efe7d9;
+      color: #3f3a33;
+      display: flex;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      inset: 0;
+      justify-content: center;
+      padding: 24px;
+      position: fixed;
+      z-index: 10;
+    }
+    #loading-card { max-width: 340px; text-align: center; }
+    #loading-mark {
+      background: #c98f52;
+      border: 4px solid #96662f;
+      border-radius: 50%;
+      height: 34px;
+      margin: 0 auto 18px;
+      width: 34px;
+    }
+    #loading-title { font-size: 20px; font-weight: 750; margin: 0; }
+    #loading-message { color: #6f655d; line-height: 1.4; margin: 8px 0 0; }
+    #loading-retry {
+      background: #81b29a;
+      border: 1px solid #3f3a33;
+      border-radius: 10px;
+      color: #3f3a33;
+      font: inherit;
+      font-weight: 700;
+      margin-top: 18px;
+      min-height: 44px;
+      padding: 0 18px;
+    }
+    #loading-details { color: #6f655d; font-size: 12px; margin-top: 14px; text-align: left; }
+    #loading-details pre { overflow-wrap: anywhere; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <div id="loading-screen" role="status" aria-live="polite">
+    <div id="loading-card">
+      <div id="loading-mark" aria-hidden="true"></div>
+      <h1 id="loading-title">Abrindo a cozinha</h1>
+      <p id="loading-message">Preparando a bancada.</p>
+      <button id="loading-retry" type="button" hidden>Recarregar</button>
+      <details id="loading-details" hidden>
+        <summary>Detalhes técnicos</summary>
+        <pre id="loading-detail"></pre>
+      </details>
+    </div>
+  </div>
+  <script>
+    (() => {
+      let state = 'loading';
+      const screen = document.getElementById('loading-screen');
+      const title = document.getElementById('loading-title');
+      const message = document.getElementById('loading-message');
+      const retry = document.getElementById('loading-retry');
+      const details = document.getElementById('loading-details');
+      const detail = document.getElementById('loading-detail');
+
+      const render = (next, heading, body, technical = '') => {
+        if (state === 'ready') return;
+        state = next;
+        title.textContent = heading;
+        message.textContent = body;
+        retry.hidden = next === 'loading';
+        details.hidden = !technical;
+        detail.textContent = technical;
+      };
+
+      const resourceError = (event) => {
+        const target = event.target;
+        if (target && target !== window) {
+          const source = target.src || target.href || target.tagName;
+          render('error', 'A cozinha não abriu', 'Um recurso não pôde ser carregado.', String(source));
+          return;
+        }
+        const message = event.message || 'Erro desconhecido durante a inicialização.';
+        render('error', 'A cozinha não abriu', 'A inicialização encontrou um erro.', message);
+      };
+
+      const rejection = (event) => {
+        const reason = event.reason;
+        render(
+          'error',
+          'A cozinha não abriu',
+          'A inicialização encontrou um erro.',
+          reason && (reason.stack || reason.message) || String(reason),
+        );
+      };
+
+      const firstFrame = () => {
+        state = 'ready';
+        clearTimeout(slowTimer);
+        window.removeEventListener('error', resourceError, true);
+        window.removeEventListener('unhandledrejection', rejection);
+        screen.remove();
+      };
+
+      const slowTimer = setTimeout(() => {
+        if (state !== 'loading') return;
+        render(
+          'slow',
+          'A cozinha está demorando',
+          'Ainda estamos preparando a bancada. Você pode tentar recarregar.',
+          'Nenhum primeiro frame foi recebido após 30 segundos.',
+        );
+      }, 30000);
+
+      retry.addEventListener('click', () => location.reload());
+      window.addEventListener('flutter-first-frame', firstFrame, { once: true });
+      window.addEventListener('error', resourceError, true);
+      window.addEventListener('unhandledrejection', rejection);
+    })();
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
