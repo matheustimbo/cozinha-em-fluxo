@@ -2,4 +2,4 @@
 
 Protótipo jogável: https://matheustimbo.github.io/cozinha-em-fluxo/
 
-Este repositório guarda só a build web compilada. Build `20260923-224715-000d2ec`.
+Este repositório guarda só a build web compilada. Build `20260923-225443-b3a3090`.
