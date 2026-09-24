@@ -9048,7 +9048,7 @@ b7=a7.a
 b8=a7.b
 s=b8.a
 r=b8.b
-b2.l(0,b7,A.a9(["x",s,"y",r,"w",b8.c-s,"h",b8.d-r],b6,b5))}A.am6(A.a9(["build","20260924-150950-fa9e1a0","screen","game","level",c7,"best",c0,"ticks",d5,"playing",d1,"speed",d4,"frame",b1,"view",f,"ui",b3,"buttons",b2],b6,i))},
+b2.l(0,b7,A.a9(["x",s,"y",r,"w",b8.c-s,"h",b8.d-r],b6,b5))}A.am6(A.a9(["build","20260924-160431-79a4346","screen","game","level",c7,"best",c0,"ticks",d5,"playing",d1,"speed",d4,"frame",b1,"view",f,"ui",b3,"buttons",b2],b6,i))},
 ax8(a){var s,r,q,p
 A:{if(a instanceof A.c_){s=A.a9(["kind","belt","exit",a.a.b],t.N,t.K)
 break A}if(a instanceof A.cS){s=A.a9(["kind","bridge","exit",a.a.b],t.N,t.K)
@@ -9063,7 +9063,7 @@ p=q.a
 o=q.b
 n=o.a
 m=o.b
-k.l(0,p,A.a9(["x",n,"y",m,"w",o.c-n,"h",o.d-m],l,r))}A.am6(A.a9(["build","20260924-150950-fa9e1a0","screen","picker","kitchens",b,"buttons",k],l,t.X))},
+k.l(0,p,A.a9(["x",n,"y",m,"w",o.c-n,"h",o.d-m],l,r))}A.am6(A.a9(["build","20260924-160431-79a4346","screen","picker","kitchens",b,"buttons",k],l,t.X))},
 ac7:function ac7(){},
 ac8:function ac8(){},
 ay5(a){var s,r,q,p=a.dy,o=A.a0(p).i("aq<1>"),n=A.kc(new A.aq(p,new A.abp(),o))
