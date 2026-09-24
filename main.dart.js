@@ -9197,7 +9197,7 @@ _.e=e
 _.f=f
 _.r=g
 _.w=h},
-oE(a,b){var s=a.c,r=a.d,q=Math.min((b.c-b.a)/s,(b.d-b.b)/r)
+oE(a,b){var s=a.c,r=a.d,q=Math.max(1,Math.min((b.c-b.a)/s,(b.d-b.b)/r))
 return new A.oD(q,b.ga1().a_(0,new A.h((a.a+s/2)*q,(a.b+r/2)*q)))},
 aiF(a,b,c,d,e,f,g,h,i){return new A.Cd(b,i,e,f,h,a,c,d,g,null)},
 oD:function oD(a,b){this.a=a
@@ -9325,7 +9325,7 @@ b7=a7.a
 b8=a7.b
 s=b8.a
 r=b8.b
-b2.l(0,b7,A.a6(["x",s,"y",r,"w",b8.c-s,"h",b8.d-r],b6,b5))}A.aok(A.a6(["build","20260924-024427-fe04562","screen","game","level",c7,"best",c0,"ticks",d5,"playing",d1,"speed",d4,"frame",b1,"view",f,"ui",b3,"buttons",b2],b6,i))},
+b2.l(0,b7,A.a6(["x",s,"y",r,"w",b8.c-s,"h",b8.d-r],b6,b5))}A.aok(A.a6(["build","20260924-025944-12ea0e5","screen","game","level",c7,"best",c0,"ticks",d5,"playing",d1,"speed",d4,"frame",b1,"view",f,"ui",b3,"buttons",b2],b6,i))},
 azI(a){var s,r,q,p
 A:{if(a instanceof A.c6){s=A.a6(["kind","belt","exit",a.a.b],t.N,t.K)
 break A}if(a instanceof A.cW){s=A.a6(["kind","bridge","exit",a.a.b],t.N,t.K)
@@ -9340,7 +9340,7 @@ p=q.a
 o=q.b
 n=o.a
 m=o.b
-k.l(0,p,A.a6(["x",n,"y",m,"w",o.c-n,"h",o.d-m],l,r))}A.aok(A.a6(["build","20260924-024427-fe04562","screen","picker","kitchens",b,"buttons",k],l,t.X))},
+k.l(0,p,A.a6(["x",n,"y",m,"w",o.c-n,"h",o.d-m],l,r))}A.aok(A.a6(["build","20260924-025944-12ea0e5","screen","picker","kitchens",b,"buttons",k],l,t.X))},
 ae9:function ae9(){},
 aea:function aea(){},
 aAH(a){var s,r,q,p=a.dy,o=A.a_(p).h("at<1>"),n=A.kq(new A.at(p,new A.adq(),o))
@@ -40613,6 +40613,7 @@ if(n!=null)s.l(0,o.c,n)}m.Q!==$&&A.ar()
 m.Q=s
 l=s}return l},
 av(a,b){var s,r,q=this
+if(!(q.c.a>0))return
 if(q.w===B.l8){q.Yl(a)
 return}$.E()
 s=A.U()
@@ -42450,8 +42451,8 @@ $S:18}
 A.a8b.prototype={
 $2(a,b){var s,r,q,p,o,n,m,l,k,j,i,h=null,g=this.a,f=A.M(1/0,b.a,b.b),e=A.M(1/0,b.c,b.d)
 g.CW=new A.Q(f,e)
-s=f<640?132:88
-r=new A.r(10,88,f-10,e-s-6)
+s=Math.max(11,f-10)
+r=new A.r(10,88,s,Math.max(89,e-(f<640?132:88)-6))
 if(!r.j(0,g.cx)){g.cx=r
 g.a2d()}if(!g.ch){g.ch=!0
 q=g.X=A.a4D().gqa().i(0,"intro")!=="0"
