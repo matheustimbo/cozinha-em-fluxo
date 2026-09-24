@@ -5,8 +5,8 @@
     "display": "standalone",
     "background_color": "#efe7d9",
     "theme_color": "#efe7d9",
-    "description": "Ligue as estações e acompanhe os alimentos.",
-    "orientation": "portrait-primary",
+    "description": "Ligue esteiras, cozinhe e mantenha as mesas servidas.",
+    "orientation": "any",
     "prefer_related_applications": false,
     "icons": [
         {
