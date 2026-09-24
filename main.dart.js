@@ -9260,7 +9260,7 @@ b5=a6.a
 b6=a6.b
 s=b6.a
 r=b6.b
-b1.l(0,b5,A.aa(["x",s,"y",r,"w",b6.c-s,"h",b6.d-r],b4,b3))}A.anB(A.aa(["build","20260924-000723-c48f511","screen","game","level",c3,"best",b8,"ticks",d1,"playing",c7,"speed",d0,"frame",a9,"view",f,"ui",b0,"buttons",b1],b4,i))},
+b1.l(0,b5,A.aa(["x",s,"y",r,"w",b6.c-s,"h",b6.d-r],b4,b3))}A.anB(A.aa(["build","20260924-010131-1882008","screen","game","level",c3,"best",b8,"ticks",d1,"playing",c7,"speed",d0,"frame",a9,"view",f,"ui",b0,"buttons",b1],b4,i))},
 ayW(a){var s,r,q,p
 A:{if(a instanceof A.ci){s=A.aa(["kind","belt","exit",a.a.b],t.N,t.K)
 break A}if(a instanceof A.dh){s=A.aa(["kind","bridge","exit",a.a.b],t.N,t.K)
@@ -9275,7 +9275,7 @@ p=q.a
 o=q.b
 n=o.a
 m=o.b
-k.l(0,p,A.aa(["x",n,"y",m,"w",o.c-n,"h",o.d-m],l,r))}A.anB(A.aa(["build","20260924-000723-c48f511","screen","picker","kitchens",b,"buttons",k],l,t.X))},
+k.l(0,p,A.aa(["x",n,"y",m,"w",o.c-n,"h",o.d-m],l,r))}A.anB(A.aa(["build","20260924-010131-1882008","screen","picker","kitchens",b,"buttons",k],l,t.X))},
 adw:function adw(){},
 anL(a,b){var s,r,q=b.d
 if(q==null)return B.j1
@@ -40823,13 +40823,13 @@ if(j.dx)if(j.fx==null){s=j.ax
 s===$&&A.a()
 s=s.z===B.au}if(s){s=j.ax
 s===$&&A.a()
-s.a4P(i*j.dy)}s=j.ax
+s.a4P(i*j.dy*1.5)}s=j.ax
 s===$&&A.a()
 s=s.kb()
 j.ay=s
 r=j.dx&&j.fx==null&&j.ax.z===B.au
 q=j.at
-q+=i*(r?j.dy:1)
+q+=i*(r?j.dy*1.5:1)
 j.at=q
 j.as.dt(s,q)
 s=j.go
@@ -41509,7 +41509,7 @@ p=e.ay
 p===$&&A.a()
 o=e.ax
 o===$&&A.a()
-n=A.aAV(p,c,o.c.r.d)
+n=A.aAV(p,c,o.c.r.d/1.5)
 m=e.Vi(a,c,r,new A.Q(q,110+21*B.b.mR(n,0,new A.a7i())))
 l=c.b
 k=l===B.cs?"Mesa de "+c.ax.c:l.c
@@ -41569,7 +41569,7 @@ s=this.ax
 s===$&&A.a()
 q=s.c.r.k2.i(0,B.b.gO(q).b)
 q.toString
-r.push(A.bs(A.anE(q),A.bd(k,k,B.a7,k,k,k,k,k,k,k,k,15,k,k,B.D,k,1.2,!0,k,k,k,k,k,k,k,k),k))
+r.push(A.bs(A.anE(q/1.5),A.bd(k,k,B.a7,k,k,k,k,k,k,k,k,15,k,k,B.D,k,1.2,!0,k,k,k,k,k,k,k,k),k))
 r=A.ali(r,B.yx,0,0)
 s=r
 break
